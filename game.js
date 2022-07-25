@@ -41,10 +41,9 @@ function cellClicked(event) {
       //disable clicking
       cells.forEach(cell => cell.style.pointerEvents = 'none');
       // confetti effect
-      party.confetti(document.getElementById('main-container'), {
-        count: 40
+      party.confetti(document.getElementById('game-board'), {
+        count: 80
       });
-
     }
     // else switch player
     currentPlayer = (currentPlayer == PLAYER_O) ? PLAYER_X : PLAYER_O;
@@ -64,6 +63,10 @@ function playerWon() {
 }
 
 function restartGame() {
+  party.confetti(newGameButton, {
+    speed: party.variation.range(200, 600)
+  });
+
   cells.forEach(cell => {
     cell.innerText = '';
     cell.style.backgroundColor = '#fff';
