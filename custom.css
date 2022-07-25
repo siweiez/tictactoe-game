@@ -1,0 +1,138 @@
+:root {
+  --primary-color: #7973bb ;
+  --player-x: #4eb2ff;
+  --player-o: #65d3dd;
+}
+
+h1 {
+  font-family: 'Gloria Hallelujah', cursive;
+  text-align: center;
+  white-space: nowrap;
+  padding: 2rem 0;
+  color: var(--primary-color);
+  text-shadow: 2px 2px 10px #e5e5e5;
+}
+
+.board-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.board {
+  font-family: 'Walter Turncoat', cursive;
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  height: 300px;
+  box-shadow: 2px 2px 10px #e5e5e5;
+}
+
+.cell {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 70px;
+  border-bottom: 3px solid #6c6c6c;
+  border-right: 3px solid #6c6c6c;
+  cursor: pointer;
+  color: var(--primary-color);
+  text-shadow: 2px 2px 10px #e5e5e5;
+}
+
+/* border lines */
+.cell:nth-child(3n) {
+  border-right: none;
+}
+
+.cell:nth-child(6)~.cell {
+  border-bottom: none;
+}
+
+.message-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0 6rem;
+}
+
+.winning-message {
+  font-size: 36px;
+  padding-bottom: 2rem;
+  font-family: 'Walter Turncoat', cursive;
+  text-shadow: 2px 2px 10px #e5e5e5;
+}
+
+.new-game-button {
+  background-color: white;
+  width: 220px;
+  height: 60px;
+  border-radius: 30px;
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 26px;
+  box-shadow: 2px 2px 10px #e5e5e5;
+  transition: all 0.3s ease-in-out;
+}
+
+.new-game-button:hover {
+  transition: all 0.3s ease-in-out;
+  box-shadow: 2px 2px 15px #a1b9c4;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  height: 300px;
+  width: 100vw;
+  color: #606060;
+}
+
+.footer-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+
+.link {
+  font-size: 30px;
+  margin: 15px;
+  cursor: pointer;
+  color: #606060;
+}
+
+.link:hover {
+  color: #0e0e0e;
+}
+
+.footer-text {
+  font-size: 14px;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  h1 {
+    padding: 3rem 0;
+  }
+
+  .board {
+    width: 480px;
+    height: 480px;
+  }
+
+  .cell {
+    height: 160px;
+    width: 160px;
+    font-size: 110px;
+  }
+
+}
